@@ -1,30 +1,10 @@
-﻿var phonecatControllers = angular.module('phonecatControllers', []);
+﻿var phonecatControllers = angular.module('phonecatControllers', ['phoneListSvc']);
 
-phonecatControllers.controller('PhoneListCtrl', function ($scope) {
+phonecatControllers.controller('PhoneListCtrl', ['$scope', 'phoneListSvc', function($scope, phoneListSvc) {
 
-    $scope.phones = [
-     {
-         'id': 1,
-         'name': 'Nexus 5',
-         'snippet': 'Fast just got faster with Nexus 5',
-         'age': 1
-     },
-     {
-         'id': 2,
-         'name': 'Motorola A',
-         'snippet': 'The Next, Next Generation tablet.',
-         'age': 2
-     },
-     {
-         'id': 3,
-         'name': 'MOTOROLA B™',
-         'snippet': 'The Next, Next Generation tablet.',
-         'age': 3
-     }
-    ];
-
+    $scope.phones = phoneListSvc.getItems();
     $scope.orderProp = 'age';
-});
+}]);
 
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
   function ($scope, $routeParams) {
