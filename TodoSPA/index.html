@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="App/Scripts/app.js"></script>
     <script src="App/Scripts/controllers.js"></script>
 </head>
-<body ng-controller="PhoneListCtrl">
+<body ng-controller="HomeCtrl">
 
     <br />
     <div class="container" role="main">
@@ -18,21 +18,6 @@
             <div class="col-xs-10 col-xs-offset-1">
                 <div ng-view class="panel-body">
                     
-                    Search: <input ng-model="query">
-
-                    Sort by:
-                    <select ng-model="orderProp">
-                        <option value="name">Alphabetical</option>
-                        <option value="age">Newest</option>
-                    </select>
-
-
-                    <ul>
-                        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-                            <span>{{phone.name}}</span>
-                            <p>{{phone.snippet}}</p>
-                        </li>
-                    </ul>
 
                 </div>
             </div>
