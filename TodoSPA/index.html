@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Todo List: a SPA sample demonstrating Azure AD and ADAL JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app role="document">
+
+    <br />
+    <div class="container" role="main">
+
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div ng-view class="panel-body">
+                    <b>Nothing here {{'yet' + '!'}}</b>
+                    <p>Only angular expression:</p>
+                    <p>What is 2 +3 ={{2+3}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
