@@ -10,6 +10,7 @@ namespace TodoSPA.Controllers
     public class PhoneListController : ApiController
     {
         // GET: api/TodoList
+        [Authorize]
         public IEnumerable<Phone> Get()
         {
             Phone nexus = new Phone();
