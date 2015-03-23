@@ -7,6 +7,8 @@
 </select>
 
 
+<button ng-click="test()">test</button>
+
 <ul>
     <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
         <span>{{phone.name}}</span>

@@ -2,7 +2,8 @@
   'ngRoute',
   'phonecatControllers',
   'phoneListSvc',
-  'AdalAngular'
+  'AdalAngular',
+  'jwtHelperSvc'
 ]);
 
 phonecatApp.config(['$routeProvider', '$httpProvider', 'adalAuthenticationServiceProvider', function ($routeProvider, $httpProvider, adalProvider) {
